@@ -14,19 +14,21 @@ body {
   background-size: cover;
   position: relative;
   overflow: hidden;
-  background-size: cover;
-  scroll-behavior: hidden;
+  scroll-behavior: smooth; /* Changed from 'hidden' to 'smooth' for proper scrolling behavior */
+  display: flex; /* Added to center content */
   justify-content: center;
+  align-items: center; /* Added to center content vertically */
 }
 
 body::before {
   content: "";
   position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  justify-content: center;
-  width: 100%;
-  text-align: center;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.11);
+  z-index: -1; /* Added to ensure it stays behind other content */
 }
 
 .container {
@@ -36,22 +38,21 @@ body::before {
   height: 100vh;
   width: 100%;
   text-align: center;
-  border-radius: 10px;
 }
 
 .screen {
   background: #fbf1f1d9;
-  position: fixed;
+  position: relative; /* Changed from 'fixed' to 'relative' for better positioning */
   width: 550px;
   box-shadow: 0px 0px 24px #000000;
-  justify-content: center;
   border-radius: 10px;
+  padding: 20px; /* Added padding for better spacing */
 }
 
 .screen__content {
   z-index: 1;
   position: relative;
-  height: 30%;
+  height: 100%; /* Adjusted height to fill the container */
 }
 
 .screen__background {
@@ -80,9 +81,9 @@ body::before {
 }
 
 .login__field {
-  padding: 10px 10px;
+  padding: 10px;
   position: relative;
-  margin-left: 10px;
+  margin-bottom: 20px; /* Added margin for spacing between fields */
 }
 
 .login__icon {
@@ -97,7 +98,6 @@ body::before {
   background: none;
   text-align: center;
   padding: 10px;
-  padding-left: 10px;
   font-weight: 700;
   width: 100%;
   transition: 0.2s;
@@ -113,7 +113,6 @@ body::before {
 .login__submit {
   background: #fff;
   font-size: 14px;
-  margin-left: 30px;
   padding: 13px 40px;
   border-radius: 26px;
   border: 1px solid #d4d3e8;
@@ -121,7 +120,9 @@ body::before {
   font-weight: 700;
   display: flex;
   align-items: center;
+  justify-content: center; /* Centered text inside the button */
   width: 50%;
+  margin: 0 auto; /* Centered the button */
   box-shadow: 0px 2px 2px #27374d;
   cursor: pointer;
   transition: 0.2s;
@@ -183,7 +184,7 @@ body::before {
 }
 
 .txt {
-  margin: auto0;
+  margin: 0; /* Fixed margin value */
   text-align: center;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
@@ -200,13 +201,11 @@ body::before {
 
 #bg-video {
   position: absolute;
-  background-size: cover;
-  width: fit-content;
   top: 0;
   left: 0;
+  width: 100%;
   height: 122vh;
-  width: auto;
-  background-size: cover;
+  object-fit: cover; /* Ensures the video covers the entire area */
   z-index: -1;
 }
 
