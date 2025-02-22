@@ -9,31 +9,40 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <title>Atlas V3</title>
-    <!-- Adding favicon-->
+    <!-- Adding favicon -->
     <link rel="shortcut icon" href="TA.png" type="image/x-icon" />
     <link rel="stylesheet" href="./styles.css" />
   </head>
 
   <body>
+    <!-- Video Background -->
     <div class="video-bg">
-      <video id="bg-video" autoplay loop muted>
+      <video id="bg-video" autoplay loop muted playsinline>
         <source
           src="https://graph.org/file/57837b3c2721ea10d2345.mp4"
           type="video/mp4"
         />
+        Your browser does not support the video tag.
       </video>
     </div>
 
+    <!-- Main Container -->
     <div class="container">
       <div class="screen">
         <div class="screen__content">
+          <!-- Login Form -->
           <form class="login" action="/qr" method="get" target="_blank">
+            <!-- Logo -->
             <div class="login__field">
-              <img class="main-logo" src="TA.png" alt="logo" />
+              <img class="main-logo" src="TA.png" alt="Atlas Logo" />
             </div>
+
+            <!-- Title -->
             <div class="login__field">
               <h2 class="txt">Atlas WhatsApp Bot V-3</h2>
             </div>
+
+            <!-- Session ID Input -->
             <div class="login__field">
               <input
                 type="text"
@@ -41,12 +50,16 @@
                 placeholder="Enter Your Session ID"
                 id="session"
                 name="session"
+                required
               />
             </div>
 
-            <button class="button login__submit">
+            <!-- Verify Button -->
+            <button type="submit" class="button login__submit">
               <span class="button__text">Verify</span>
             </button>
+
+            <!-- Social Media Links -->
             <p class="follow_me">Please Support Me on</p>
             <div class="my_icons">
               <a
@@ -54,6 +67,8 @@
                 href="https://www.github.com/FantoX001"
                 style="padding-right: 15px; text-decoration: none"
                 target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
               >
                 <i
                   class="fa fa-github"
@@ -65,6 +80,8 @@
                 href="https://www.youtube.com/@fantoxgaming"
                 style="text-decoration: none"
                 target="_blank"
+                rel="noopener noreferrer"
+                aria-label="YouTube"
               >
                 <i
                   class="fa fa-youtube-play"
@@ -73,6 +90,8 @@
               </a>
             </div>
           </form>
+
+          <!-- Social Login Section -->
           <div class="social-login">
             <div class="social-icons"></div>
           </div>
