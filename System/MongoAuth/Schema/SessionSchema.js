@@ -1,13 +1,18 @@
 const { model, Schema } = require("mongoose");
 
-const schema = new Schema({
+// Define the schema
+const sessionSchema = new Schema({
   sessionId: {
     type: String,
     required: true,
     unique: true,
   },
-
-  session: String,
+  session: {
+    type: String,
+    required: true, // Added required for better data integrity
+  },
 });
 
-module.exports = model("sessionschemas", schema);
+// Create and export the model
+const SessionModel = model("Session", sessionSchema); // Use PascalCase for model names
+module.exports = SessionModel;
